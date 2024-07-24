@@ -49,7 +49,7 @@ This website is deployed using GitHub Pages and can be accessed at: https://jaso
 
 ## Contact
 
-Feel free to reach out to me at jasona.milne@outlook.com or connect with me on www.linkedin.com/jasonamilne.
+Feel free to reach out to me at jasona.milne@outlook.com or connect with me on www.linkedin.com/in/jasonamilne.
 
 ## License
 
