@@ -34,7 +34,7 @@ nav a:hover {
 
 .download-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 10px 20px;
     background-color: #28a745;
     color: #fff;
@@ -48,7 +48,7 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: #333;
     color: #fff;
     position: fixed;
