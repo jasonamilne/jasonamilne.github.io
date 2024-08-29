@@ -7516,13 +7516,14 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Statistical Learning Fundamentals in Finance</strong></p>
+<p>Our purpose of this work is to provide an inquiry into statistical learning methodology applied to financial industry data.</p>
 <p><strong>Statistical Learning History</strong></p>
 <p>Statistical learning began with least squares linear regression which was developed at the beginning of the nineteenth century with the publication of "Nouvelles Methodes Pour La Determination Des Orbites Des Cometes" (English: New Methods for the Determination of Orbits of Comets) by Par A.M. Legendre.</p>
 <p>By the 1970s general linear models developed to describe an entire class of statistical learning methods that include both linear and logistic regression.</p>
 <p>Non-linear methods proved elusive computationally but by the 1980s computing technology finally improved enough so that non-linear methods were no longer computationally infeasible.</p>
 <p>After 1980 a wide corpous of methods have emerged including classification trees, regression trees, generalized additive models, neural networks, and support vector machines.</p>
 <p>Statistical learning today has emerged as a new subfield in statistics focused on supervised and unsupervised modeling and prediction.</p>
-<p>Here we apply these methods to financial data.</p>
 </div>
 </div>
 </div>
@@ -8055,8 +8056,8 @@ Name: Volume, Length: 1006, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">finance_data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">finance_data</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">])</span>
-<span class="nb">max</span><span class="p">(</span><span class="n">finance_data</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plot of trading volume from "2020-01-01" to "2024-01-01"</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">finance_data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">finance_data</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -8088,7 +8089,8 @@ Name: Volume, Length: 1006, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Maximum trading volume over the period of interest</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">finance_data</span><span class="p">[</span><span class="s1">'Volume'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -8102,20 +8104,6 @@ Name: Volume, Length: 1006, dtype: int64</pre>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>1543911000</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
 </div>
 </div>
 </div>
