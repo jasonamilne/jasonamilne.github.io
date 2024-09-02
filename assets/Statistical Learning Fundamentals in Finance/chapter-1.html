@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -392,7 +392,408 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-1">
 <h1>Chapter 1:<a class="headerlink" href="#chapter-1" title="Link to this heading">#</a></h1>
-<p>In progress…</p>
+<p><strong>Statistical Learning Fundamentals in Finance</strong></p>
+<p>Our purpose of this work is to provide an inquiry into statistical learning methodology applied to financial industry data.</p>
+<p><strong>Statistical Learning History</strong></p>
+<p>Statistical learning began with least squares linear regression which was developed at the beginning of the nineteenth century with the publication of “Nouvelles Methodes Pour La Determination Des Orbites Des Cometes” (English: New Methods for the Determination of Orbits of Comets) by Par A.M. Legendre.</p>
+<p>By the 1970s general linear models developed to describe an entire class of statistical learning methods that include both linear and logistic regression.</p>
+<p>Non-linear methods proved elusive computationally but by the 1980s computing technology finally improved enough so that non-linear methods were no longer computationally infeasible.</p>
+<p>After 1980 a wide corpous of methods have emerged including classification trees, regression trees, generalized additive models, neural networks, and support vector machines.</p>
+<p>Statistical learning today has emerged as a new subfield in statistics focused on supervised and unsupervised modeling and prediction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ticker</span> <span class="o">=</span> <span class="s2">&quot;NVDA&quot;</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="s2">&quot;2020-01-01&quot;</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="s2">&quot;2024-01-01&quot;</span>
+
+<span class="c1"># Download data</span>
+<span class="n">finance_data</span> <span class="o">=</span> <span class="n">yf</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">ticker</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">end_date</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[*********************100%***********************]  1 of 1 completed
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Adj Close</th>
+      <th>Volume</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2023-12-22</th>
+      <td>49.195000</td>
+      <td>49.382999</td>
+      <td>48.466999</td>
+      <td>48.830002</td>
+      <td>48.823704</td>
+      <td>252507000</td>
+    </tr>
+    <tr>
+      <th>2023-12-26</th>
+      <td>48.967999</td>
+      <td>49.599998</td>
+      <td>48.959999</td>
+      <td>49.278999</td>
+      <td>49.272640</td>
+      <td>244200000</td>
+    </tr>
+    <tr>
+      <th>2023-12-27</th>
+      <td>49.511002</td>
+      <td>49.680000</td>
+      <td>49.084999</td>
+      <td>49.417000</td>
+      <td>49.410622</td>
+      <td>233648000</td>
+    </tr>
+    <tr>
+      <th>2023-12-28</th>
+      <td>49.643002</td>
+      <td>49.883999</td>
+      <td>49.411999</td>
+      <td>49.521999</td>
+      <td>49.515610</td>
+      <td>246587000</td>
+    </tr>
+    <tr>
+      <th>2023-12-29</th>
+      <td>49.813000</td>
+      <td>49.997002</td>
+      <td>48.750999</td>
+      <td>49.521999</td>
+      <td>49.515610</td>
+      <td>389293000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data</span><span class="p">[</span><span class="s1">&#39;Volume&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date
+2020-01-02    237536000
+2020-01-03    205384000
+2020-01-06    262636000
+2020-01-07    314856000
+2020-01-08    277108000
+                ...    
+2023-12-22    252507000
+2023-12-26    244200000
+2023-12-27    233648000
+2023-12-28    246587000
+2023-12-29    389293000
+Name: Volume, Length: 1006, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data</span><span class="p">[</span><span class="s1">&#39;Volume&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>466988536000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data_new</span> <span class="o">=</span> <span class="n">finance_data</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data</span> <span class="o">=</span> <span class="n">finance_data_new</span>
+<span class="n">finance_data</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Open&#39;, &#39;High&#39;, &#39;Low&#39;, &#39;Close&#39;, &#39;Adj Close&#39;, &#39;Volume&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data</span><span class="p">[[</span><span class="s1">&#39;High&#39;</span><span class="p">,</span> <span class="s1">&#39;Low&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>High</th>
+      <th>Low</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-01-02</th>
+      <td>5.997750</td>
+      <td>5.918000</td>
+    </tr>
+    <tr>
+      <th>2020-01-03</th>
+      <td>5.945750</td>
+      <td>5.852500</td>
+    </tr>
+    <tr>
+      <th>2020-01-06</th>
+      <td>5.931750</td>
+      <td>5.781750</td>
+    </tr>
+    <tr>
+      <th>2020-01-07</th>
+      <td>6.044250</td>
+      <td>5.909750</td>
+    </tr>
+    <tr>
+      <th>2020-01-08</th>
+      <td>6.051000</td>
+      <td>5.953750</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2023-12-22</th>
+      <td>49.382999</td>
+      <td>48.466999</td>
+    </tr>
+    <tr>
+      <th>2023-12-26</th>
+      <td>49.599998</td>
+      <td>48.959999</td>
+    </tr>
+    <tr>
+      <th>2023-12-27</th>
+      <td>49.680000</td>
+      <td>49.084999</td>
+    </tr>
+    <tr>
+      <th>2023-12-28</th>
+      <td>49.883999</td>
+      <td>49.411999</td>
+    </tr>
+    <tr>
+      <th>2023-12-29</th>
+      <td>49.997002</td>
+      <td>48.750999</td>
+    </tr>
+  </tbody>
+</table>
+<p>1006 rows × 2 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">finance_data</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2020-01-02&#39;, &#39;2020-01-03&#39;, &#39;2020-01-06&#39;, &#39;2020-01-07&#39;,
+               &#39;2020-01-08&#39;, &#39;2020-01-09&#39;, &#39;2020-01-10&#39;, &#39;2020-01-13&#39;,
+               &#39;2020-01-14&#39;, &#39;2020-01-15&#39;,
+               ...
+               &#39;2023-12-15&#39;, &#39;2023-12-18&#39;, &#39;2023-12-19&#39;, &#39;2023-12-20&#39;,
+               &#39;2023-12-21&#39;, &#39;2023-12-22&#39;, &#39;2023-12-26&#39;, &#39;2023-12-27&#39;,
+               &#39;2023-12-28&#39;, &#39;2023-12-29&#39;],
+              dtype=&#39;datetime64[ns]&#39;, name=&#39;Date&#39;, length=1006, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># notice the volume on the last trading day of the year is comparable.</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2021-12-29&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-12-29&#39;</span><span class="p">,</span><span class="s1">&#39;2023-12-29&#39;</span><span class="p">]</span>
+<span class="n">finance_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">rows</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Adj Close</th>
+      <th>Volume</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2021-12-29</th>
+      <td>30.273001</td>
+      <td>30.548000</td>
+      <td>29.365999</td>
+      <td>30.000999</td>
+      <td>29.955812</td>
+      <td>343139000</td>
+    </tr>
+    <tr>
+      <th>2022-12-29</th>
+      <td>14.402000</td>
+      <td>14.683000</td>
+      <td>14.227000</td>
+      <td>14.603000</td>
+      <td>14.594639</td>
+      <td>354923000</td>
+    </tr>
+    <tr>
+      <th>2023-12-29</th>
+      <td>49.813000</td>
+      <td>49.997002</td>
+      <td>48.750999</td>
+      <td>49.521999</td>
+      <td>49.515610</td>
+      <td>389293000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot of trading volume from &quot;2020-01-01&quot; to &quot;2024-01-01&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">finance_data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">finance_data</span><span class="p">[</span><span class="s1">&#39;Volume&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fdddc3e5060&gt;]
+</pre></div>
+</div>
+<img alt="_images/1e11f9e639848314cfacf771a2cb7af3fa0902212816af9a99607b43d8e72732.png" src="_images/1e11f9e639848314cfacf771a2cb7af3fa0902212816af9a99607b43d8e72732.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Maximum trading volume over the period of interest</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">finance_data</span><span class="p">[</span><span class="s1">&#39;Volume&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1543911000
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
