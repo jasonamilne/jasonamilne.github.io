@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Mastering Data Science - A Comprehensive Guide
+title: Mastering Data Science
 author: Jason A. Milne
 logo: logo.png
 
@@ -21,12 +21,15 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://jasonamilne.github.io/assets/mastering-data-science/mastering-data-science/_build/html/intro.html  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/jasonamilne/jasonamilne.github.io  # Your GitHub repository URL
+  path_to_book: assets/mastering-data-science  # Path to your book within the repository
+  branch: main  # Assuming you're using the 'main' branch
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+
+# Specify the output directory for the built book
+output_dir: _build/html
