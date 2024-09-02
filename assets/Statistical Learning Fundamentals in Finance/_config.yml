@@ -23,7 +23,14 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: true
+  use_binder_button: true
   baseurl: /assets/Statistical Learning Fundamentals in Finance/
+
+# Binder configuration
+launch_buttons:
+  notebook_interface: "classic"  # or "jupyterlab"
+  binderhub_url: "https://mybinder.org"
 
 # Add any Sphinx extension you may need
 sphinx:
@@ -31,6 +38,10 @@ sphinx:
     - 'sphinx.ext.autodoc'
     - 'sphinx.ext.napoleon'
     - 'sphinx.ext.viewcode'
+    - 'jupyterlite_sphinx'  # Add this for JupyterLite support
+  config:
+    html_theme_options:
+      use_thebe: true  # Add this for ThebeLab support
 
 # MyST extensions
 parse:
@@ -72,4 +83,10 @@ html_theme_options:
   use_fullscreen_button: true
   use_repository_button: true
 
-# Add any other configuration options you might need
+# JupyterLite settings
+jupyterlite_dir: "jupyterlite"  # Directory where JupyterLite files will be stored
+
+# ThebeLab settings
+thebe_config:
+  repository_url: https://github.com/jasonamilne/jasonamilne.github.io
+  repository_branch: main
