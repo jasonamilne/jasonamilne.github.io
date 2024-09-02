@@ -1,0 +1,92 @@
+# Book settings
+title: Statistical Learning Fundamentals in Finance
+author: Jason A. Milne
+logo: logo.png
+copyright: "2024"
+
+# Force re-execution of notebooks on each build
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/jasonamilne/jasonamilne.github.io
+  path_to_book: assets/Statistical Learning Fundamentals in Finance
+  branch: main
+
+# Add GitHub buttons to your book
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  use_binder_button: true
+  baseurl: /assets/Statistical Learning Fundamentals in Finance/
+
+# Binder configuration
+launch_buttons:
+  notebook_interface: "classic"  # or "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+
+# Add any Sphinx extension you may need
+sphinx:
+  extra_extensions:
+    - 'sphinx.ext.autodoc'
+    - 'sphinx.ext.napoleon'
+    - 'sphinx.ext.viewcode'
+    - 'jupyterlite_sphinx'  # Add this for JupyterLite support
+  config:
+    html_theme_options:
+      use_thebe: true  # Add this for ThebeLab support
+
+# MyST extensions
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - linkify
+    - substitution
+    - tasklist
+  myst_url_schemes:
+    - mailto
+    - http
+    - https
+
+# Output options
+output:
+  html_baseurl: /assets/Statistical Learning Fundamentals in Finance/
+
+# Jupyter Book settings
+jupyter_execute_notebooks: force
+
+# LaTeX settings
+latex:
+  latex_engine: pdflatex
+  use_jupyterbook_latex: true
+
+# Bibliography settings
+bibtex_bibfiles:
+  - references.bib
+
+# Execution settings
+execution:
+  allow_errors: false
+  timeout: 30
+
+# HTML theme settings
+html_theme_options:
+  use_download_button: true
+  use_fullscreen_button: true
+  use_repository_button: true
+
+# JupyterLite settings
+jupyterlite_dir: "jupyterlite"  # Directory where JupyterLite files will be stored
+
+# ThebeLab settings
+thebe_config:
+  repository_url: https://github.com/jasonamilne/jasonamilne.github.io
+  repository_branch: main
