@@ -135,6 +135,25 @@
             margin-top: 20px;
         }
         
+        .nav-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color) !important;
+            padding: 5px 15px !important;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .nav-button:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .nav-button::after {
+            display: none;
+        }
+        
         nav ul {
             display: flex;
             justify-content: center;
@@ -356,9 +375,9 @@
         <div class="banner-container">
             <div class="moving-banner">
                 🔥 EXCLUSIVE: Join our AI insider list for early access to new tools & special pricing! 
-                <a href="#contact" class="subscribe-btn">Get Access</a>
+                <a href="subscribe.html" class="subscribe-btn">Get Access</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥 EXCLUSIVE: Join our AI insider list for early access to new tools & special pricing! 
-                <a href="#contact" class="subscribe-btn">Get Access</a>
+                <a href="subscribe.html" class="subscribe-btn">Get Access</a>
             </div>
         </div>
         <h1>Jason A. Milne</h1>
@@ -370,6 +389,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="blog.html" class="nav-button">Blog</a></li>
             </ul>
         </nav>
     </header>
