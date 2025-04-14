@@ -2,10 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jason A. Milne: Technical Leader (PMP, PE) & AI/ML Strategist with MS Data Science (AI). Expertise in AI implementation, product leadership, MLOps, cloud architecture, and driving business value from AI.">
     <title>Jason A. Milne | Technical Leader & AI/ML Strategist</title>
@@ -47,6 +43,47 @@
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
             margin-bottom: 40px;
+        }
+        
+        /* Moving banner styles */
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--primary-color);
+            padding: 10px 0;
+            margin-bottom: 25px;
+            color: white;
+            border-radius: var(--border-radius);
+        }
+        
+        .moving-banner {
+            display: inline-block;
+            white-space: nowrap;
+            animation: moveLeft 15s linear infinite;
+            padding-left: 100%;
+            font-weight: 500;
+        }
+        
+        @keyframes moveLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .subscribe-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 2px 10px;
+            border-radius: 15px;
+            margin-left: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .subscribe-btn:hover {
+            background-color: white;
+            transform: scale(1.05);
         }
         
         h1 {
@@ -316,6 +353,14 @@
 <body>
 
     <header>
+        <div class="banner-container">
+            <div class="moving-banner">
+                🔥 EXCLUSIVE: Join our AI insider list for early access to new tools & special pricing! 
+                <a href="#contact" class="subscribe-btn">Get Access</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥 EXCLUSIVE: Join our AI insider list for early access to new tools & special pricing! 
+                <a href="#contact" class="subscribe-btn">Get Access</a>
+            </div>
+        </div>
         <h1>Jason A. Milne</h1>
         <p>Technical Leader (PMP, PE) & AI/ML Strategist | MS Data Science (AI)</p>
         <nav>
@@ -376,7 +421,7 @@
                 <h3 style="display: flex; justify-content: space-between; align-items: center;">
                     Interactive AI Terminology Navigator
                     <a href="https://instrui.ai" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 8px 16px; background-color: var(--accent-color); color: var(--primary-color); text-decoration: none; font-weight: 600; border-radius: 4px; transition: var(--transition); font-size: 0.9rem; margin-left: 15px;">
-                        instrui.ai
+                        InstrUI.ai
                     </a>
                 </h3>
                 <p>Developed an interactive AI glossary using React and HTML/JS, covering 2000+ terms across 29+ topics. Features search functionality and linked concepts to simplify complex AI terminology and boost AI literacy.</p>
@@ -413,4 +458,4 @@
     </script>
 
 </body>
-</html>    
+</html>
