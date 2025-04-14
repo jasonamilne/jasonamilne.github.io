@@ -1,3 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jason A. Milne's Blog - Insights on AI/ML strategy, technical leadership, and implementation from an experienced PMP and PE certified professional.">
+    <title>Blog | Jason A. Milne - Technical Leader & AI/ML Strategist</title>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #4299e1;
+            --accent-color: #f6ad55;
+            --text-color: #2d3748;
+            --light-text: #718096;
+            --background: #ffffff;
+            --light-bg: #f7fafc;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 40px 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 40px;
+        }
+        
+        /* Moving banner styles */
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--primary-color);
+            padding: 10px 0;
+            margin-bottom: 25px;
+            color: white;
+            border-radius: var(--border-radius);
+        }
+        
+        .moving-banner {
+            display: inline-block;
+            white-space: nowrap;
+            animation: moveLeft 15s linear infinite;
+            padding-left: 100%;
+            font-weight: 500;
+        }
+        
+        .banner-container:hover .moving-banner {
+            animation-play-state: paused;
+        }
+        
+        @keyframes moveLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .subscribe-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 2px 10px;
+            border-radius: 15px;
+            margin-left: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .subscribe-btn:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 24px;
+        }
+        
+        nav {
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            list-style-type: none;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 5px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-button {
+            background-color: var(--accent-color);
+            color: var(--primary-color) !important;
+            padding: 5px 15px !important;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .nav-button:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .nav-button::after {
+            display: none;
+        }
+        
+        /* Blog specific styles */
+        .blog-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .blog-content {
+            flex: 7;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+        }
+        
+        .blog-sidebar {
+            flex: 3;
+            align-self: flex-start;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .sidebar-section {
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-section h3 {
+            margin-bottom: 15px;
+        }
+        
+        .article-list {
+            list-style: none;
+        }
+        
+        .article-list li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .article-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .article-list a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+        }
+        
+        .article-list a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .article-date {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--light-text);
+            margin-top: 5px;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        .article-meta .date {
+            margin-right: 15px;
+        }
+        
+        .article-meta .tags {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .tag {
+            background-color: rgba(66, 153, 225, 0.1);
+            color: var(--secondary-color);
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .article-content {
+            margin-bottom: 30px;
+        }
+        
+        .article-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .article-content img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+        
+        .article-content blockquote {
+            background-color: rgba(66, 153, 225, 0.1);
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .article-content pre {
+            background-color: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .article-content code {
+            font-family: monospace;
+        }
+        
+        .search-form {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .search-form input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: 0.9rem;
+        }
+        
+        .search-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-form button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .categories {
+            list-style: none;
+        }
+        
+        .categories li {
+            margin-bottom: 10px;
+        }
+        
+        .categories a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .categories a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .categories .count {
+            background-color: rgba(66, 153, 225, 0.1);
+            color: var(--secondary-color);
+            padding: 2px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+        
+        .read-more:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .pagination a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .pagination a:hover, .pagination a.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid #e2e8f0;
+            color: var(--light-text);
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* List styling */
         ul, ol {
             padding-left: 2rem;
         }
@@ -5,6 +452,42 @@
         li {
             margin-bottom: 8px;
         }
+        
+        /* Nested lists */
+        li > ul, 
+        li > ol {
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-container {
+                flex-direction: column;
+            }
+            
+            .blog-sidebar {
+                position: static;
+                width: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -87,7 +570,7 @@
                                 <li><strong>Monitoring</strong> - Track model performance, data drift, and operational metrics</li>
                                 <li><strong>Feedback Loop</strong> - Mechanism to incorporate production insights into the next iteration</li>
                             </ol>
-                            <p></p>
+                            
                             <p>In my experience, organizations that succeed with MLOps focus as much on people and processes as they do on technology. This includes establishing cross-functional teams, clear ownership definitions, and governance frameworks that don't impede innovation.</p>
                             
                             <h3>Common Implementation Challenges and Solutions</h3>
@@ -101,7 +584,7 @@
                     </article>
                     
                     <div class="pagination">
-                        <a href="subscribe.html" class="active">1</a>
+                                                    <a href="subscribe.html" class="active">1</a>
                         <a href="subscribe.html">2</a>
                         <a href="subscribe.html">3</a>
                         <a href="subscribe.html">&raquo;</a>
