@@ -384,11 +384,44 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
         
-        // Basic form handling (would need to be connected to a backend service)
+        // Form submission handler
         document.getElementById('subscribe-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for subscribing! You will receive a confirmation email shortly.');
-            // In a real implementation, you would send the form data to your backend
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const profession = document.getElementById('profession').value;
+            const interests = document.getElementById('interests').value;
+            const consent = document.getElementById('consent').checked;
+            
+            // Create mailto link with form data in body
+            const subject = "New AI Insider List Subscription";
+            const body = `New Subscriber Information:
+            
+Name: ${name}
+Email: ${email}
+Professional Role: ${profession}
+Primary AI/ML Interest: ${interests}
+Marketing Consent: ${consent ? "Yes" : "No"}
+
+This message was sent from the subscription form on your website.`;
+
+            // Encode the subject and body for the mailto URL
+            const mailtoLink = `mailto:email@domain.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Create and trigger a hidden link to open the email client
+            const tempLink = document.createElement('a');
+            tempLink.href = mailtoLink;
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+            
+            // Show confirmation message
+            alert('Thank you for subscribing! An email has been created with your information. Please send it to complete your subscription.');
+            
+            // Optional: Reset the form
+            this.reset();
         });
     </script>
 
