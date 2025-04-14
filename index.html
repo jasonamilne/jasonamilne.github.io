@@ -3,9 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jason A. Milne: Technical Leader (PMP, PE) & AI/ML Strategist with MS Data Science (AI). Expertise in AI implementation, product leadership, MLOps, cloud architecture, and driving business value from AI. Seeking senior leadership roles.">
-    <title>Jason A. Milne | Technical Leader (PMP, PE) & AI/ML Strategist</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Jason A. Milne: Technical Leader (PMP, PE) & AI/ML Strategist with MS Data Science (AI). Expertise in AI implementation, product leadership, MLOps, cloud architecture, and driving business value from AI.">
+    <title>Jason A. Milne | Technical Leader & AI/ML Strategist</title>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #4299e1;
+            --accent-color: #f6ad55;
+            --text-color: #2d3748;
+            --light-text: #718096;
+            --background: #ffffff;
+            --light-bg: #f7fafc;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 40px 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 24px;
+        }
+        
+        nav {
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            list-style-type: none;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 5px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        #hero {
+            text-align: center;
+            padding: 60px 30px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        #hero h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        #hero h2::after {
+            background-color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+        }
+        
+        #hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        #expertise ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            list-style-type: none;
+            margin-top: 20px;
+        }
+        
+        #expertise li {
+            padding: 16px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border-left: 3px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        #expertise li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        #results article {
+            padding: 24px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        #results article:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #contact {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+        }
+        
+        #contact h2 {
+            color: white;
+        }
+        
+        #contact h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+        }
+        
+        #contact p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        
+        #contact a {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+        
+        #contact a:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid #e2e8f0;
+            color: var(--light-text);
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            #results {
+                grid-template-columns: 1fr;
+            }
+            
+            #hero {
+                padding: 40px 20px;
+            }
+            
+            #hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +305,7 @@
         <p>Technical Leader (PMP, PE) & AI/ML Strategist | MS Data Science (AI)</p>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
@@ -26,8 +317,8 @@
     <main>
         <section id="hero">
             <h2>Bridging Technical Leadership & AI Innovation</h2>
-            <p>Leveraging 12+ years of PMP/PE-certified technical leadership with deep expertise in AI/ML (MS Data Science) to drive strategic AI implementation and product leadership.</p>
-            </section>
+            <p>Leveraging 12+ years of PMP/PE-certified technical leadership with deep expertise in AI/ML to drive strategic AI implementation and deliver transformative solutions.</p>
+        </section>
 
         <section id="value-prop">
             <h2>Unique Blend of Expertise</h2>
@@ -39,29 +330,28 @@
             <ul>
                 <li>AI Strategy & Implementation</li>
                 <li>Technical Product Management (AI Focus)</li>
-                <li>Project Management (PMP Certified - Full Lifecycle)</li>
+                <li>Project Management (PMP Certified)</li>
                 <li>Systems Engineering (PE Licensed)</li>
                 <li>MLOps & AI/ML Lifecycle Management</li>
-                <li>Cloud Platform Architecture & Management</li>
-                <li>Stakeholder Management & Communication</li>
+                <li>Cloud Platform Architecture</li>
+                <li>Stakeholder Management</li>
                 <li>Data-Driven Decision Making</li>
-                <li>AI Ethics & Safety Awareness</li>
+                <li>AI Ethics & Safety</li>
             </ul>
         </section>
 
         <section id="results">
-            <h2>Proven Track Record & Impact</h2>
             <article>
                 <h3>End-to-End Project Delivery</h3>
-                <p>Successfully delivered >100 complex technical projects, demonstrating expertise across the full project lifecycle.</p>
+                <p>Successfully delivered 100+ complex technical projects, demonstrating expertise across the full project lifecycle.</p>
             </article>
             <article>
                 <h3>Strategic Execution & Growth</h3>
-                <p>Achieved results like 20% YoY revenue growth and secured $25M+ contract wins through focused strategic execution and efficiency improvements.</p>
+                <p>Achieved 20% YoY revenue growth and secured $25M+ contract wins through focused strategic execution and efficiency improvements.</p>
             </article>
             <article>
                 <h3>Scalable Cloud Architecture</h3>
-                <p>Architected and managed a cloud system supporting 2000+ projects, eliminating data silos and enhancing organizational resilience and transparency.</p>
+                <p>Architected and managed a cloud system supporting 2000+ projects, eliminating data silos and enhancing organizational resilience.</p>
             </article>
         </section>
 
@@ -71,36 +361,32 @@
                 <h3>Interactive AI Terminology Navigator</h3>
                 <p>Developed an interactive AI glossary using React and HTML/JS, covering 2000+ terms across 29+ topics. Features search functionality and linked concepts to simplify complex AI terminology and boost AI literacy.</p>
                 <p>This project demonstrates practical application of AI knowledge and tool development skills to address communication gaps.</p>
-                </article>
-            </section>
+            </article>
+        </section>
 
         <section id="about">
             <h2>About Me: The Journey to AI Leadership</h2>
             <p>Driven by AI's transformative power, I pivoted my career after 12+ years in engineering/operations leadership. My MS in Data Science (AI focus) provides deep expertise across the AI/ML landscape, grounded in ethics and safety.</p>
             <p>Passionate about continuous learning and tackling complex challenges where engineering, data science, and AI converge. My goal is to shape technology roadmaps, lead innovative teams, and drive impactful AI solutions.</p>
-            </section>
+        </section>
 
         <section id="contact">
             <h2>Let's Connect</h2>
             <p>Seeking senior Technical Leadership or AI-focused Product Management opportunities. Need a results-oriented leader skilled in AI Strategy & Implementation, Technical PM (PMP), MLOps, and Stakeholder Management?</p>
             <p>Let's discuss how my blended expertise can drive your AI initiatives forward.</p>
-            <p>
-                <strong><a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></strong>
-            </p>
-            </section>
+            <a href="https://linkedin.com/in/jasonamilne" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+        </section>
     </main>
 
     <footer>
         <p>&copy; <span id="year"></span> Jason A. Milne. All rights reserved.</p>
         <p>
-             <a href="[Your LinkedIn Profile URL]" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-             <a href="https://github.com/jasonamilne" target="_blank" rel="noopener noreferrer">GitHub</a>
-             </p>
+            <a href="https://linkedin.com/in/jasonamilne" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://github.com/jasonamilne" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
     </footer>
 
-    <script src="script.js"></script>
     <script>
-        // Simple script to update the year automatically
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 
