@@ -19,6 +19,9 @@
     <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
+    <!-- Feather Icons (simple SVG icons) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
     <!-- SVG Icons -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="icon-play" viewBox="0 0 24 24">
@@ -67,35 +70,33 @@
     <div id="root"></div>
     
     <script type="text/babel">
-        // Create custom icon components
-        const IconComponent = ({ name, className = "", size = 24, ...props }) => {
+        // Create custom icon components using Feather Icons
+        const Icon = ({ name, className = "", size = 24, ...props }) => {
+            React.useEffect(() => {
+                feather.replace();
+            }, []);
+            
             return (
-                <svg 
-                    className={`icon-${name} ${className}`} 
-                    width={size} 
+                <i 
+                    data-feather={name}
+                    className={className}
+                    width={size}
                     height={size}
-                    stroke="currentColor"
-                    fill="none"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
                     {...props}
-                >
-                    <use xlinkHref={`#icon-${name}`}></use>
-                </svg>
+                />
             );
         };
         
         // Create icon components
-        const Play = (props) => <IconComponent name="play" {...props} />;
-        const CheckCircle = (props) => <IconComponent name="check-circle" {...props} />;
-        const AlertCircle = (props) => <IconComponent name="alert-circle" {...props} />;
-        const Code = (props) => <IconComponent name="code" {...props} />;
-        const FileText = (props) => <IconComponent name="file-text" {...props} />;
-        const Settings = (props) => <IconComponent name="settings" {...props} />;
-        const Zap = (props) => <IconComponent name="zap" {...props} />;
-        const Terminal = (props) => <IconComponent name="terminal" {...props} />;
-        const GitBranch = (props) => <IconComponent name="git-branch" {...props} />;
+        const Play = (props) => <Icon name="play" {...props} />;
+        const CheckCircle = (props) => <Icon name="check-circle" {...props} />;
+        const AlertCircle = (props) => <Icon name="alert-circle" {...props} />;
+        const Code = (props) => <Icon name="code" {...props} />;
+        const FileText = (props) => <Icon name="file-text" {...props} />;
+        const Settings = (props) => <Icon name="settings" {...props} />;
+        const Zap = (props) => <Icon name="zap" {...props} />;
+        const Terminal = (props) => <Icon name="terminal" {...props} />;
+        const GitBranch = (props) => <Icon name="git-branch" {...props} />;
 
         const VeriQuantDemo = () => {
           const [currentStep, setCurrentStep] = React.useState(0);
@@ -249,6 +250,18 @@ theorem binomial_convergence (S₀ K T r σ : ℝ) :
             setLeanProofs(null);
             setShowLeanCode(false);
           };
+          
+          React.useEffect(() => {
+            // Initialize feather icons after component mount
+            feather.replace();
+            
+            // Re-initialize feather icons whenever results or UI state changes
+            return () => {
+              setTimeout(() => {
+                feather.replace();
+              }, 100);
+            };
+          }, [currentStep, isRunning, results, showLeanCode]);
 
           return (
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
@@ -653,6 +666,11 @@ theorem binomial_convergence (S₀ K T r σ : ℝ) :
         // Render the application
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<VeriQuantDemo />);
+        
+        // Initialize Feather icons after initial render
+        setTimeout(() => {
+          feather.replace();
+        }, 100);
     </script>
 </body>
 </html>
