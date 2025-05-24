@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Subscribe to Jason A. Milne's AI insider list for early access to AI tools, services, and exclusive content.">
-    <title>Subscribe | AI Insider List - Jason A. Milne</title>
+    <meta name="description" content="Subscribe to Jason A. Milne's Quantitative Finance Newsletter for updates on formal verification in finance, algorithmic trading strategies, and mathematical modeling.">
+    <title>Subscribe | Quantitative Finance Newsletter - Jason A. Milne</title>
     <style>
         :root {
             --primary-color: #2a4365;
@@ -288,36 +288,36 @@
 
     <header>
         <h1>Jason A. Milne</h1>
-        <p>Technical Leader (PMP, PE) & AI/ML Strategist | MS Data Science (AI)</p>
+        <p>Quantitative Finance Professional | Formal Verification | AI Applications in Finance</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#expertise">Expertise</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#expertise">Expertise</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="blog.html" class="nav-button">Blog</a></li>
+                <li><a href="blog.html" class="nav-button">Research</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <div class="container">
-            <h2>Join the AI Insider List</h2>
+            <h2>Subscribe to Quantitative Finance Research</h2>
             
             <div class="form-intro">
-                <p>Get exclusive early access to new AI tools, special pricing, and expert insights directly to your inbox.</p>
-                <p>As an AI/ML strategist with deep technical expertise, I share valuable content that helps professionals stay ahead of the curve in this rapidly evolving field.</p>
+                <p>Stay updated with the latest research in formal verification of financial algorithms, quantitative modeling, and AI applications in finance.</p>
+                <p>As a quantitative finance professional specializing in formal verification, I share valuable insights on building provably correct financial models and eliminating algorithmic risk.</p>
             </div>
             
             <div class="benefits">
                 <h3>As a subscriber, you'll receive:</h3>
                 <ul>
-                    <li>Early access to new AI tools and services</li>
-                    <li>Exclusive discounts on premium courses</li>
-                    <li>Practical AI implementation strategies</li>
-                    <li>Industry insights and trend analysis</li>
-                    <li>Invitations to member-only webinars</li>
+                    <li>Technical papers on formal verification in finance</li>
+                    <li>VeriQuant platform updates and demos</li>
+                    <li>Mathematical proofs for financial algorithms</li>
+                    <li>Research on algorithmic trading strategies</li>
+                    <li>Invitations to quantitative finance webinars</li>
                 </ul>
             </div>
             
@@ -336,27 +336,27 @@
                     <label for="profession">Professional Role</label>
                     <select id="profession" name="profession">
                         <option value="">Select your role</option>
-                        <option value="executive">Executive/Leadership</option>
-                        <option value="data_scientist">Data Scientist/ML Engineer</option>
-                        <option value="product_manager">Product Manager</option>
-                        <option value="software_engineer">Software Engineer</option>
-                        <option value="consultant">Consultant</option>
-                        <option value="academic">Academic/Researcher</option>
+                        <option value="quant">Quantitative Analyst</option>
+                        <option value="trader">Algorithmic Trader</option>
+                        <option value="risk">Risk Management Professional</option>
+                        <option value="researcher">Financial Researcher</option>
+                        <option value="developer">Financial Software Developer</option>
+                        <option value="academic">Academic/Professor</option>
                         <option value="student">Student</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="interests">Primary AI/ML Interests</label>
+                    <label for="interests">Primary Financial Interest</label>
                     <select id="interests" name="interests">
                         <option value="">Select your primary interest</option>
-                        <option value="genai">Generative AI</option>
-                        <option value="nlp">Natural Language Processing</option>
-                        <option value="mlops">MLOps & AI Infrastructure</option>
-                        <option value="implementation">AI Implementation Strategy</option>
-                        <option value="ethics">AI Ethics & Safety</option>
-                        <option value="business">Business Applications of AI</option>
+                        <option value="options">Options Pricing</option>
+                        <option value="verification">Formal Verification</option>
+                        <option value="algorithmic">Algorithmic Trading</option>
+                        <option value="risk">Risk Management</option>
+                        <option value="portfolio">Portfolio Optimization</option>
+                        <option value="ai">AI in Finance</option>
                         <option value="all">All of the Above</option>
                     </select>
                 </div>
@@ -396,19 +396,19 @@
             const consent = document.getElementById('consent').checked;
             
             // Create mailto link with form data in body
-            const subject = "New AI Insider List Subscription";
+            const subject = "New Quantitative Finance Newsletter Subscription";
             const body = `New Subscriber Information:
             
 Name: ${name}
 Email: ${email}
 Professional Role: ${profession}
-Primary AI/ML Interest: ${interests}
+Primary Financial Interest: ${interests}
 Marketing Consent: ${consent ? "Yes" : "No"}
 
 This message was sent from the subscription form on your website.`;
 
             // Encode the subject and body for the mailto URL
-            const mailtoLink = `mailto:info@instrui.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoLink = `mailto:jasona.milne@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             
             // Create and trigger a hidden link to open the email client
             const tempLink = document.createElement('a');

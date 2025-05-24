@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jason A. Milne's Blog - Insights on AI/ML strategy, technical leadership, and implementation from an experienced PMP and PE certified professional.">
-    <title>Blog | Jason A. Milne - Technical Leader & AI/ML Strategist</title>
+    <meta name="description" content="Jason A. Milne's Research - Technical papers on quantitative finance, formal verification of financial algorithms, and applications of AI in finance.">
+    <title>Research | Jason A. Milne - Quantitative Finance Professional</title>
     <style>
         :root {
             --primary-color: #2a4365;
@@ -493,24 +493,16 @@
 
     <div class="wrapper">
         <header>
-            <div class="banner-container">
-                <div class="moving-banner">
-                    🔥 EXCLUSIVE: Join our AI insider list for early access to new tools & special pricing! 
-                    <a href="subscribe.html" class="subscribe-btn">Get Access</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔥 EXCLUSIVE: Join our AI insider list for early access to new tools & special pricing! 
-                    <a href="subscribe.html" class="subscribe-btn">Get Access</a>
-                </div>
-            </div>
             <h1>Jason A. Milne</h1>
-            <p>Technical Leader (PMP, PE) & AI/ML Strategist | MS Data Science (AI)</p>
+            <p>Quantitative Finance Professional | Formal Verification | AI Applications in Finance</p>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#expertise">Expertise</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#expertise">Expertise</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="blog.html" class="nav-button">Blog</a></li>
+                    <li><a href="blog.html" class="nav-button">Research</a></li>
                 </ul>
             </nav>
         </header>
@@ -519,75 +511,69 @@
             <div class="blog-container">
                 <div class="blog-content">
                     <article>
-                        <h2>The Practical Guide to Implementing MLOps in Enterprise Environments</h2>
+                        <h2>Formal Verification in Financial Modeling: A VeriQuant Case Study</h2>
                         <div class="article-meta">
-                            <span class="date">April 10, 2025</span>
+                            <span class="date">May 15, 2025</span>
                             <div class="tags">
-                                <span class="tag">MLOps</span>
-                                <span class="tag">Enterprise</span>
-                                <span class="tag">AI Strategy</span>
+                                <span class="tag">Formal Verification</span>
+                                <span class="tag">Options Pricing</span>
+                                <span class="tag">Lean 4</span>
                             </div>
                         </div>
                         <div class="article-content">
-                            <p>When organizations begin their journey to operationalize machine learning, they often face a complex landscape of technical challenges, organizational resistance, and governance concerns. In this comprehensive guide, I'll share practical lessons from implementing MLOps across multiple enterprise environments.</p>
+                            <p>The reliability of financial models is of paramount importance in quantitative finance. Model errors can lead to significant financial losses, regulatory issues, and damage to institutional reputation. This paper presents VeriQuant, a novel approach that combines multi-agent AI systems with formal verification techniques to ensure mathematical correctness in financial algorithms.</p>
                             
-                            <p>Many enterprises struggle with the transition from successful proof-of-concept ML models to production-ready systems that deliver continuous business value. The root causes typically include:</p>
+                            <p>Traditional validation methods for financial models typically rely on statistical testing, which can only identify issues present in the test data. In contrast, formal verification provides mathematical proofs of correctness that hold for all possible inputs, eliminating entire classes of errors.</p>
                             
-                            <ul>
-                                <li>Siloed teams with different priorities and toolsets</li>
-                                <li>Manual, non-reproducible deployment workflows</li>
-                                <li>Lack of monitoring for model drift and performance</li>
-                                <li>Inadequate governance and compliance frameworks</li>
-                            </ul>
+                            <h3>The Binomial Options Pricing Implementation</h3>
                             
-                            <h3>The MLOps Maturity Framework</h3>
+                            <p>We'll focus on a detailed case study of formally verifying the Cox-Ross-Rubinstein binomial options pricing model, which is widely used for pricing American and European options.</p>
                             
-                            <p>Before diving into implementation specifics, it's crucial to assess your organization's current MLOps maturity level:</p>
-                            
-                            <p><strong>Level 0: Manual Process</strong> - Data scientists work in isolation, manual deployment, no automation or monitoring</p>
-                            
-                            <p><strong>Level 1: Basic Automation</strong> - Some CI/CD pipeline integration, basic model versioning, manual intervention still required</p>
-                            
-                            <p><strong>Level 2: Continuous Delivery</strong> - Automated training and deployment pipelines, data validation, and model monitoring</p>
-                            
-                            <p><strong>Level 3: Full MLOps Automation</strong> - Feature stores, automated retraining based on drift detection, A/B testing capabilities</p>
-                            
-                            <blockquote>
-                                "The goal isn't to achieve the highest MLOps maturity level immediately, but to progress strategically based on your organization's specific needs and constraints."
-                            </blockquote>
-                            
-                            <h3>Key Components of an Enterprise MLOps Architecture</h3>
-                            
-                            <p>A robust MLOps architecture should include these essential components:</p>
+                            <p>The binomial model discretizes time into multiple periods where the underlying asset price can move up or down by specific factors. The formal verification process includes:</p>
                             
                             <ol>
-                                <li><strong>Data Pipeline Management</strong> - Ensure data quality, versioning, and lineage tracking</li>
-                                <li><strong>Feature Engineering Pipeline</strong> - Create reusable features, potentially with a feature store</li>
-                                <li><strong>Model Training Pipeline</strong> - Automate model training with experiment tracking</li>
-                                <li><strong>Model Evaluation</strong> - Standardize performance metrics and evaluation criteria</li>
-                                <li><strong>Model Registry</strong> - Centralized repository for trained models with versioning</li>
-                                <li><strong>Deployment Pipeline</strong> - Standardized path to production with proper testing</li>
-                                <li><strong>Monitoring</strong> - Track model performance, data drift, and operational metrics</li>
-                                <li><strong>Feedback Loop</strong> - Mechanism to incorporate production insights into the next iteration</li>
+                                <li><strong>Mathematical Specification</strong> - Rigorous formulation of the model properties</li>
+                                <li><strong>Implementation in Lean 4</strong> - Encoding the algorithm in a formal verification language</li>
+                                <li><strong>Proof Development</strong> - Creating mathematical proofs of correctness</li>
+                                <li><strong>Theorem Validation</strong> - Verification by the Lean 4 proof assistant</li>
                             </ol>
                             
-                            <p>In my experience, organizations that succeed with MLOps focus as much on people and processes as they do on technology. This includes establishing cross-functional teams, clear ownership definitions, and governance frameworks that don't impede innovation.</p>
+                            <blockquote>
+                                "Formal verification doesn't just check that the model works correctly; it mathematically proves that the implementation satisfies its specification under all possible inputs."
+                            </blockquote>
                             
-                            <h3>Common Implementation Challenges and Solutions</h3>
+                            <h3>Key Advantages of Formal Verification in Finance</h3>
                             
-                            <p>These challenges consistently appear during enterprise MLOps implementations:</p>
+                            <p>Our implementation demonstrates several critical advantages over traditional validation approaches:</p>
                             
-                            <p>This article continues with detailed strategies for overcoming technical, organizational, and governance challenges in MLOps implementation, followed by case studies from financial services, healthcare, and manufacturing sectors.</p>
+                            <ul>
+                                <li><strong>Elimination of Implementation Errors</strong> - Mathematical guarantees that the code correctly implements the model</li>
+                                <li><strong>Boundary Condition Verification</strong> - Ensures correctness at extreme input values</li>
+                                <li><strong>Model Consistency</strong> - Proves that the model satisfies key financial properties</li>
+                                <li><strong>Regulatory Compliance</strong> - Provides rigorous evidence for model validation requirements</li>
+                            </ul>
                             
-                            <a href="subscribe.html" class="read-more">Continue Reading</a>
+                            <h3>Multi-Agent AI Architecture for Verification</h3>
+                            
+                            <p>VeriQuant employs a multi-agent system architecture to facilitate the formal verification process:</p>
+                            
+                            <ol>
+                                <li><strong>Planning Agent</strong> - Determines verification strategy and proof structure</li>
+                                <li><strong>Generation Agent</strong> - Creates implementation code and proof templates</li>
+                                <li><strong>Verification Agent</strong> - Constructs and validates mathematical proofs</li>
+                            </ol>
+                            
+                            <p>This paper continues with detailed examples of formally verified binomial pricing implementations, comparisons with traditional testing methods, and future extensions to more complex models such as Black-Scholes and Monte Carlo simulations.</p>
+                            
+                            <a href="https://github.com/jasonamilne/veriquant" target="_blank" class="read-more">View Project on GitHub</a>
                         </div>
                     </article>
                     
                     <div class="pagination">
-                                                    <a href="subscribe.html" class="active">1</a>
-                        <a href="subscribe.html">2</a>
-                        <a href="subscribe.html">3</a>
-                        <a href="subscribe.html">&raquo;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">&raquo;</a>
                     </div>
                 </div>
                 
@@ -604,24 +590,24 @@
                         <h3>Recent Articles</h3>
                         <ul class="article-list">
                             <li>
-                                <a href="subscribe.html">The Practical Guide to Implementing MLOps in Enterprise Environments</a>
-                                <span class="article-date">April 10, 2025</span>
+                                <a href="#">Formal Verification in Financial Modeling: A VeriQuant Case Study</a>
+                                <span class="article-date">May 15, 2025</span>
                             </li>
                             <li>
-                                <a href="subscribe.html">Navigating AI Ethics: A Framework for Technical Leaders</a>
+                                <a href="#">Multi-Agent AI Systems for Quantitative Finance</a>
+                                <span class="article-date">April 22, 2025</span>
+                            </li>
+                            <li>
+                                <a href="#">The Future of Model Validation: Mathematical Guarantees vs. Statistical Testing</a>
+                                <span class="article-date">April 8, 2025</span>
+                            </li>
+                            <li>
+                                <a href="#">Binomial Options Pricing with Formal Verification</a>
                                 <span class="article-date">March 25, 2025</span>
                             </li>
                             <li>
-                                <a href="subscribe.html">From PoC to Production: Scaling Generative AI Applications</a>
-                                <span class="article-date">March 12, 2025</span>
-                            </li>
-                            <li>
-                                <a href="subscribe.html">Cloud Architecture Patterns for Machine Learning Systems</a>
-                                <span class="article-date">February 28, 2025</span>
-                            </li>
-                            <li>
-                                <a href="subscribe.html">Technical Debt in ML Systems: Prevention and Management</a>
-                                <span class="article-date">February 15, 2025</span>
+                                <a href="#">Applying Lean 4 to Financial Algorithm Verification</a>
+                                <span class="article-date">March 10, 2025</span>
                             </li>
                         </ul>
                     </div>
@@ -629,13 +615,13 @@
                     <div class="sidebar-section">
                         <h3>Categories</h3>
                         <ul class="categories">
-                            <li><a href="subscribe.html">AI Strategy <span class="count">8</span></a></li>
-                            <li><a href="subscribe.html">MLOps <span class="count">6</span></a></li>
-                            <li><a href="subscribe.html">Technical Leadership <span class="count">5</span></a></li>
-                            <li><a href="subscribe.html">Cloud Architecture <span class="count">4</span></a></li>
-                            <li><a href="subscribe.html">Generative AI <span class="count">7</span></a></li>
-                            <li><a href="subscribe.html">AI Ethics <span class="count">3</span></a></li>
-                            <li><a href="subscribe.html">Project Management <span class="count">4</span></a></li>
+                            <li><a href="#">Formal Verification <span class="count">6</span></a></li>
+                            <li><a href="#">Options Pricing <span class="count">4</span></a></li>
+                            <li><a href="#">Quantitative Finance <span class="count">7</span></a></li>
+                            <li><a href="#">Mathematical Proofs <span class="count">5</span></a></li>
+                            <li><a href="#">Algorithmic Trading <span class="count">3</span></a></li>
+                            <li><a href="#">Risk Management <span class="count">4</span></a></li>
+                            <li><a href="#">Multi-Agent Systems <span class="count">2</span></a></li>
                         </ul>
                     </div>
                     
