@@ -30,12 +30,13 @@
         const createIconComponent = (iconName) => {
             return (props) => {
                 const { className = "", size = 24, ...otherProps } = props;
-                return React.createElement("div", { 
+                return React.createElement("span", { 
                     className: `lucide lucide-${iconName.toLowerCase()} ${className}`,
-                    dangerouslySetInnerHTML: { __html: lucide[iconName] },
-                    style: { width: size, height: size },
                     ...otherProps
-                });
+                }, React.createElement("span", {
+                    dangerouslySetInnerHTML: { __html: lucide[iconName] },
+                    style: { width: size, height: size, display: 'inline-block' }
+                }));
             };
         };
         
