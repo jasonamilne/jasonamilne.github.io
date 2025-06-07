@@ -3,31 +3,32 @@
 Personal website for Jason A. Milne, Model Development Consultant specializing in building reliable and effective models for businesses.
 
 ## Website Structure
-- **Home Page**: Overview of services and approach to model development
-- **Consulting Page**: Detailed service offerings and consulting process
+- **Single-Page Application**: All content consolidated into one seamless page with smooth navigation
+- **Sections**: Home, Services, Process, Testimonials, Demo, and Contact
 - **Veriquant Demo**: Coming soon page for interactive model demonstrations
 
 ## Features
-- Clean, focused design emphasizing model development services
-- Mobile-responsive layout
+- Single-page design with smooth scrolling navigation
+- Mobile-responsive layout with hamburger menu
 - SEO optimized with meta tags and structured data
 - Google Analytics integration (placeholder ready for your tracking ID)
 - Professional presentation with consistent styling
 - Testimonials section to build credibility
-- Call-to-action banners for better conversion
+- Call-to-action sections for better conversion
 - Sitemap and robots.txt for improved search engine indexing
 
 ## Technical Details
-- Pure HTML/CSS implementation
-- No dependencies or frameworks
+- Pure HTML/CSS implementation with JavaScript for navigation
+- No external dependencies or frameworks
 - Fast loading and easy to maintain
 - Optimized for search engines
+- Consolidated single-file structure for simplicity
 
 ## Development
 To make changes to this website:
 1. Clone the repository
-2. Edit the HTML/CSS files
-3. Test locally by opening the HTML files in a browser
+2. Edit the `index.html` file
+3. Test locally by opening the HTML file in a browser
 4. Commit and push to GitHub to deploy
 
 ## SEO
