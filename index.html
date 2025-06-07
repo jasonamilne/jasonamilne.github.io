@@ -72,6 +72,15 @@
             font-weight: 700;
             font-size: 1.2rem;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-logo {
+            width: 32px;
+            height: 32px;
+            filter: brightness(0) invert(1); /* Makes the SVG white */
         }
         
         .nav-links {
@@ -398,7 +407,10 @@
     <!-- Navigation -->
     <nav>
         <div class="wrapper">
-            <a href="#home" class="nav-brand">Jason A. Milne</a>
+            <a href="#home" class="nav-brand">
+                <img src="favicon.svg" alt="Jason A. Milne Logo" class="nav-logo">
+                Jason A. Milne
+            </a>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             <div class="nav-links" id="navLinks">
                 <a href="#home">Home</a>
