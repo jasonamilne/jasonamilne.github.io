@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Model Development Consulting services offered by Jason A. Milne - Building reliable and effective models for businesses.">
+    <title>Consulting Services | Jason A. Milne - Model Development</title>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #4299e1;
+            --accent-color: #f6ad55;
+            --text-color: #2d3748;
+            --light-text: #718096;
+            --background: #ffffff;
+            --light-bg: #f7fafc;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 40px 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            margin-bottom: 24px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        #hero {
+            text-align: center;
+            padding: 60px 30px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        #hero h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        #hero h2::after {
+            background-color: white;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+        }
+        
+        #hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: var(--transition);
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        #contact {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+        }
+        
+        #contact h2 {
+            color: white;
+        }
+        
+        #contact h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+        }
+        
+        #contact p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid #e2e8f0;
+            color: var(--light-text);
+        }
+        
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            #hero {
+                padding: 40px 20px;
+            }
+            
+            #hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Jason A. Milne</h1>
+            <p>Model Development Consultant</p>
+            <p><a href="index.html" style="color: var(--secondary-color); text-decoration: none;">← Back to Home</a></p>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h2>Model Development Services</h2>
+                <p>Helping businesses build reliable and effective models for their specific needs.</p>
+            </section>
+
+            <section id="process">
+                <h2>My Consulting Process</h2>
+                <p>A straightforward, effective approach to model development:</p>
+                
+                <div class="service-card">
+                    <h3>1. Initial Assessment</h3>
+                    <p>We begin with a thorough discussion of your needs, goals, and existing data to determine the appropriate modeling approach.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>2. Model Development</h3>
+                    <p>I design and build models that address your specific business needs, with clear documentation of methodologies and assumptions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>3. Testing & Validation</h3>
+                    <p>Each model undergoes rigorous testing to ensure it performs as expected and delivers reliable results.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>4. Implementation & Training</h3>
+                    <p>I help integrate the model into your workflows and provide training to ensure your team can effectively use and maintain it.</p>
+                </div>
+            </section>
+
+            <section id="engagement">
+                <h2>Engagement Options</h2>
+                <p>Flexible consulting arrangements to meet your needs:</p>
+                
+                <div class="service-card">
+                    <h3>Project-Based</h3>
+                    <p>Focused engagement for specific model development needs with clearly defined deliverables and timeline.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Ongoing Support</h3>
+                    <p>Regular assistance with model maintenance, updates, and improvements as your business evolves.</p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Get Started</h2>
+                <p>Ready to discuss your model development needs? Contact me for a consultation to explore how I can help you build effective models for your business.</p>
+                <a href="mailto:jasona.milne@outlook.com" class="btn">Email Me</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Jason A. Milne. All rights reserved.</p>
+            <p>
+                <a href="https://linkedin.com/in/jasonamilne" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jasonamilne" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
