@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jason A. Milne: Quantitative Finance Professional with expertise in formal verification, mathematical modeling, and AI applications in finance. MS Data Science specializing in provably correct financial algorithms.">
-    <title>Jason A. Milne | Quantitative Finance Professional</title>
+    <meta name="description" content="Jason A. Milne: Model Development Consultant specializing in creating robust, effective models for businesses.">
+    <title>Jason A. Milne | Model Development Consultant</title>
     <style>
         :root {
             --primary-color: #2a4365;
@@ -30,7 +30,7 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background);
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -45,57 +45,13 @@
             margin-bottom: 40px;
         }
         
-        /* Moving banner styles */
-        .banner-container {
-            width: 100%;
-            overflow: hidden;
-            background-color: var(--primary-color);
-            padding: 10px 0;
-            margin-bottom: 25px;
-            color: white;
-            border-radius: var(--border-radius);
-        }
-        
-        .moving-banner {
-            display: inline-block;
-            white-space: nowrap;
-            animation: moveLeft 20s linear infinite;
-            padding-left: 100%;
-            font-weight: 500;
-        }
-        
-        .banner-container:hover .moving-banner {
-            animation-play-state: paused;
-        }
-        
-        @keyframes moveLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        
-        .subscribe-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 2px 10px;
-            border-radius: 15px;
-            margin-left: 10px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .subscribe-btn:hover {
-            background-color: white;
-            transform: scale(1.05);
-        }
-        
         h1 {
             font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 8px;
             font-weight: 700;
         }
+        
         
         h2 {
             font-size: 1.8rem;
@@ -134,67 +90,6 @@
             margin-bottom: 24px;
         }
         
-        nav {
-            width: 100%;
-            margin-top: 20px;
-        }
-        
-        .nav-button {
-            background-color: var(--accent-color);
-            color: var(--primary-color) !important;
-            padding: 5px 15px !important;
-            border-radius: 20px;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .nav-button:hover {
-            background-color: white;
-            transform: translateY(-2px);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .nav-button::after {
-            display: none;
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 24px;
-            list-style-type: none;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 500;
-            font-size: 1.1rem;
-            padding: 5px 0;
-            position: relative;
-            transition: var(--transition);
-        }
-        
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--accent-color);
-            transition: var(--transition);
-        }
-        
-        nav a:hover::after {
-            width: 100%;
-        }
-        
         section {
             margin-bottom: 60px;
             padding: 30px;
@@ -230,52 +125,26 @@
             margin: 0 auto;
         }
         
-        #expertise ul {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 16px;
-            list-style-type: none;
-            margin-top: 20px;
-        }
-        
-        #expertise li {
-            padding: 16px;
-            background-color: white;
+        .service-card {
+            background: white;
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 20px;
             border-left: 3px solid var(--accent-color);
             transition: var(--transition);
         }
         
-        #expertise li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        #results {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        #results article {
-            padding: 24px;
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-        
-        #results article:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .btn {
             display: inline-block;
-            padding: 12px 28px;
             background-color: var(--accent-color);
             color: var(--primary-color);
+            padding: 12px 28px;
             text-decoration: none;
             font-weight: 600;
             border-radius: 30px;
@@ -288,16 +157,6 @@
             background-color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        #project-link {
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        #project-link .btn {
-            font-size: 1.1rem;
-            padding: 14px 32px;
         }
         
         #contact {
@@ -351,16 +210,8 @@
                 font-size: 1.6rem;
             }
             
-            nav ul {
-                gap: 15px;
-            }
-            
             section {
                 padding: 20px;
-            }
-            
-            #results {
-                grid-template-columns: 1fr;
             }
             
             #hero {
@@ -377,87 +228,70 @@
 
     <header>
         <h1>Jason A. Milne</h1>
-        <p>Quantitative Finance Professional | Formal Verification | AI Applications in Finance</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="consultancy.html">Consultancy</a></li>
-                <li><a href="blog.html" class="nav-button">Research</a></li>
-            </ul>
-        </nav>
+        <p>Model Development Consultant</p>
     </header>
 
     <main>
         <section id="hero">
-            <h2>Building Provably Correct Financial Algorithms</h2>
-            <p>Combining multi-agent AI systems and formal mathematical verification to create robust quantitative models with mathematical guarantees for finance applications.</p>
-        </section>
-
-        <section id="value-prop">
-            <h2>Quantitative Finance with Mathematical Rigor</h2>
-            <p>My expertise lies in applying formal verification techniques to financial algorithms, ensuring mathematical correctness and eliminating model risk. I leverage advanced AI systems and Lean 4 proofs to create provably correct implementations of options pricing, risk management, and portfolio optimization models.</p>
-        </section>
-
-        <section id="expertise">
-            <h2>Quantitative Expertise</h2>
-            <ul>
-                <li>Financial Modeling (Options Pricing, Risk Management)</li>
-                <li>Formal Verification (Lean 4, Mathematical Proofs)</li>
-                <li>Statistical Modeling & Machine Learning</li>
-                <li>Multi-Agent AI Systems</li>
-                <li>Portfolio Optimization</li>
-                <li>Model Validation & Regulatory Compliance</li>
-                <li>Python, PyTorch, Transformers</li>
-            </ul>
-        </section>
-
-        <section id="results">
-            <article>
-                <h3>Algorithmic Verification</h3>
-                <p>Developed formal verification techniques for financial algorithms, ensuring mathematical correctness and eliminating model risk in quantitative finance applications.</p>
-            </article>
-            <article>
-                <h3>Market Prediction System</h3>
-                <p>Created AEMLP market prediction system achieving ROC AUC 0.5716, outperforming Kaggle benchmarks through advanced statistical modeling and machine learning techniques.</p>
-            </article>
-            <article>
-                <h3>Multi-Agent AI Architecture</h3>
-                <p>Designed and implemented a multi-agent AI architecture for generating and verifying financial models, combining planning, generation, and verification agents.</p>
-            </article>
-        </section>
-
-        <section id="projects">
-            <h2>Featured Project: VeriQuant</h2>
-            <article>
-                <h3 style="display: flex; justify-content: space-between; align-items: center;">
-                    Formal Verification for Financial Algorithms
-                    <a href="https://github.com/jasonamilne/veriquant" target="_blank" rel="noopener noreferrer" class="nav-button" style="margin-left: 15px;">
-                        GitHub
-                    </a>
-                </h3>
-                <p>VeriQuant is a multi-agent AI system for generating provably correct financial models with Lean 4 mathematical verification. The platform includes binomial options pricing with formal proofs, multi-agent architecture (Planning, Generation, Verification), and a regulatory compliance framework.</p>
-                <p>This project demonstrates the application of formal verification techniques to eliminate algorithmic risk in financial modeling, ensuring mathematical correctness and regulatory compliance.</p>
-                <div id="project-link">
-                    <a href="https://jasonamilne.github.io/veriquant-demo" target="_blank" rel="noopener noreferrer" class="btn">View Live Demo</a>
-                </div>
-            </article>
+            <h2>Model Development Services</h2>
+            <p>Helping businesses build reliable and effective models for their specific needs.</p>
         </section>
 
         <section id="about">
-            <h2>About Me: Quantitative Finance Professional</h2>
-            <p>Quantitative professional with advanced technical expertise in financial model validation and algorithmic trading. Recent MS in Data Science from UT Austin with focus on formal verification methods for ensuring mathematical correctness in financial algorithms.</p>
-            <p>Passionate about the intersection of AI, mathematics, and finance - particularly how formal verification can eliminate algorithmic risk in quantitative models. My work combines multi-agent AI systems with formal mathematical proofs to create robust, verifiable financial applications.</p>
+            <h2>About My Services</h2>
+            <p>I provide focused consulting services in model development. My approach is simple: I help businesses develop practical, robust models that solve real problems.</p>
+        </section>
+
+        <section id="services">
+            <h2>What I Offer</h2>
+            
+            <div class="service-card">
+                <h3>Model Development</h3>
+                <p>I build custom models tailored to your business needs:</p>
+                <ul>
+                    <li>Requirements analysis and model scoping</li>
+                    <li>Data preparation and feature engineering</li>
+                    <li>Model selection and implementation</li>
+                    <li>Testing and validation</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Model Evaluation</h3>
+                <p>Assessment of existing models with recommendations for improvement:</p>
+                <ul>
+                    <li>Performance evaluation</li>
+                    <li>Identification of weaknesses</li>
+                    <li>Suggestions for refinement</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Documentation & Knowledge Transfer</h3>
+                <p>Clear documentation and training to ensure your team understands:</p>
+                <ul>
+                    <li>Model architecture documentation</li>
+                    <li>Usage guidelines and best practices</li>
+                    <li>Knowledge transfer sessions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="approach">
+            <h2>My Approach</h2>
+            <p>I believe in building models that are:</p>
+            <ul>
+                <li><strong>Practical:</strong> Focused on solving real business problems</li>
+                <li><strong>Reliable:</strong> Thoroughly tested and validated</li>
+                <li><strong>Understandable:</strong> Well-documented and explainable</li>
+                <li><strong>Maintainable:</strong> Designed for long-term use and adaptation</li>
+            </ul>
         </section>
 
         <section id="contact">
-            <h2>Let's Connect</h2>
-            <p>Seeking quantitative finance roles focused on algorithmic trading, model validation, or risk management. I bring unique expertise in formal verification of financial algorithms and multi-agent AI systems.</p>
-            <p>Let's discuss how my mathematical rigor and verification skills can strengthen your financial models and eliminate algorithmic risk.</p>
-            <a href="https://linkedin.com/in/jasonamilne" target="_blank" rel="noopener noreferrer" class="btn">Connect on LinkedIn</a>
+            <h2>Let's Work Together</h2>
+            <p>I'm available for consulting projects in model development. Contact me to discuss how I can help with your specific needs.</p>
+            <a href="mailto:jasona.milne@outlook.com" class="btn">Email Me</a>
         </section>
     </main>
 
