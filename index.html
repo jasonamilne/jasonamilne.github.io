@@ -3,687 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jason A. Milne: Model Development Consultant specializing in creating robust, effective models for businesses.">
-    <meta name="keywords" content="model development, business consulting, data modeling, model consultant, decision models, financial models, predictive models">
-    <meta name="author" content="Jason A. Milne">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Jason A. Milne | Model Development Consultant">
-    <meta property="og:description" content="Professional model development services to help businesses make better decisions with reliable and effective models.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jasonamilne.github.io/">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Jason A. Milne | Model Development Consultant">
-    <meta name="twitter:description" content="Professional model development services to help businesses make better decisions with reliable and effective models.">
-    <link rel="canonical" href="https://jasonamilne.github.io/">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <title>Jason A. Milne | Model Development Consultant</title>
-    <style>
-        :root {
-            --primary-color: #2a4365;
-            --secondary-color: #4299e1;
-            --accent-color: #f6ad55;
-            --text-color: #2d3748;
-            --light-text: #718096;
-            --background: #ffffff;
-            --light-bg: #f7fafc;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background);
-        }
-        
-        .wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(42, 67, 101, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 10px 0;
-        }
-        
-        nav .wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-brand {
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .nav-logo {
-            width: 32px;
-            height: 32px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        /* Main content */
-        main {
-            margin-top: 60px;
-        }
-        
-        header {
-            padding: 80px 0 40px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-        
-        h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-        
-        h3 {
-            font-size: 1.4rem;
-            color: var(--secondary-color);
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        
-        section {
-            padding: 60px 0;
-        }
-        
-        .section-alt {
-            background-color: var(--light-bg);
-        }
-        
-        .service-card, .testimonial {
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 30px;
-            margin-bottom: 25px;
-            border-left: 4px solid var(--accent-color);
-            transition: var(--transition);
-        }
-        
-        .service-card:hover, .testimonial:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .grid {
-            display: grid;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-        
-        .grid-3 {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 30px;
-            transition: var(--transition);
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .btn:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-large {
-            padding: 18px 40px;
-            font-size: 1.1rem;
-        }
-        
-        /* Contact section */
-        #contact {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            text-align: center;
-        }
-        
-        #contact h2 {
-            color: white;
-            text-align: center;
-        }
-        
-        #contact h2::after {
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--accent-color);
-        }
-        
-        #contact p {
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
-        
-        .btn-white {
-            background-color: white;
-            color: var(--primary-color);
-        }
-        
-        .btn-white:hover {
-            background-color: var(--accent-color);
-            color: white;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-        }
-        
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-            margin: 0 15px;
-            transition: var(--transition);
-        }
-        
-        footer a:hover {
-            color: white;
-        }
-        
-        /* Process steps */
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            padding: 25px;
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: var(--transition);
-        }
-        
-        .process-step:hover {
-            transform: translateY(-3px);
-        }
-        
-        .step-number {
-            background: var(--secondary-color);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-right: 25px;
-            flex-shrink: 0;
-        }
-        
-        .step-content h3 {
-            margin-bottom: 8px;
-        }
-        
-        /* Coming soon section */
-        .coming-soon {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, rgba(66, 153, 225, 0.1), rgba(246, 173, 85, 0.1));
-            border-radius: var(--border-radius);
-            margin: 40px 0;
-        }
-        
-        .coming-soon h3 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .coming-soon-badge {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--primary-color);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.6rem;
-            }
-            
-            .process-step {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .step-number {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-            
-            section {
-                padding: 40px 0;
-            }
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Mobile menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--primary-color);
-                flex-direction: column;
-                padding: 20px;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    </style>
+    <title>Jason Milne - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="wrapper">
-            <a href="#home" class="nav-brand">
-                <img src="favicon.svg" alt="Jason A. Milne Logo" class="nav-logo">
-                Jason A. Milne
-            </a>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
-            <div class="nav-links" id="navLinks">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
-                <a href="#demo">Demo</a>
-                <a href="#contact">Contact</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Jason Milne</h1>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <header id="home">
-            <div class="wrapper">
-                <h1>Jason A. Milne</h1>
-                <p class="subtitle">Model Development Consultant</p>
-                <p class="hero-description">Helping businesses build reliable and effective models to solve real-world problems and drive better decision-making.</p>
-                <a href="#contact" class="btn btn-large btn-white">Get Started Today</a>
-            </div>
-        </header>
-
-        <!-- Services Section -->
-        <section id="services">
-            <div class="wrapper">
-                <h2>My Services</h2>
-                <p>I specialize in developing custom models that address your specific business challenges with clear, measurable outcomes.</p>
-                
-                <div class="grid grid-3">
-                    <div class="service-card">
-                        <h3>Model Development</h3>
-                        <p>Building custom models from the ground up based on your specific requirements:</p>
-                        <ul style="margin-top: 15px; padding-left: 20px;">
-                            <li>Requirements analysis and planning</li>
-                            <li>Model design and architecture</li>
-                            <li>Model selection and implementation</li>
-                            <li>Testing and validation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Model Evaluation</h3>
-                        <p>Assessment of existing models with recommendations for improvement:</p>
-                        <ul style="margin-top: 15px; padding-left: 20px;">
-                            <li>Performance evaluation</li>
-                            <li>Identification of weaknesses</li>
-                            <li>Suggestions for refinement</li>
-                            <li>Implementation roadmap</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="service-card">
-                        <h3>Documentation & Training</h3>
-                        <p>Clear documentation and training to ensure your team understands:</p>
-                        <ul style="margin-top: 15px; padding-left: 20px;">
-                            <li>Model architecture documentation</li>
-                            <li>Usage guidelines and best practices</li>
-                            <li>Knowledge transfer sessions</li>
-                            <li>Ongoing support planning</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 50px;">
-                    <h3>My Approach</h3>
-                    <p>I believe in building models that deliver real value through these core principles:</p>
-                    <ul style="margin-top: 20px; max-width: 800px;">
-                        <li><strong>Practical:</strong> Focused on solving real business problems with measurable outcomes</li>
-                        <li><strong>Reliable:</strong> Thoroughly tested and validated to ensure consistent performance</li>
-                        <li><strong>Understandable:</strong> Well-documented and explainable to support business adoption</li>
-                        <li><strong>Maintainable:</strong> Designed for long-term use with clear processes for updates and improvements</li>
-                        <li><strong>Collaborative:</strong> Working closely with your team to ensure knowledge transfer and successful implementation</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section id="process" class="section-alt">
-            <div class="wrapper">
-                <h2>My Consulting Process</h2>
-                <p>A straightforward, effective approach to model development that ensures clear outcomes and successful implementation.</p>
-                
-                <div style="margin-top: 40px;">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Initial Assessment</h3>
-                            <p>We begin with a thorough discussion of your needs, goals, and existing data to determine the appropriate modeling approach. This includes understanding your business context, available resources, and success criteria.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Model Development</h3>
-                            <p>I design and build models that address your specific business needs, with clear documentation of methodologies and assumptions. Each step is transparent and aligned with your requirements.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Testing & Validation</h3>
-                            <p>Each model undergoes rigorous testing to ensure it performs as expected and delivers reliable results. We validate against real-world scenarios and edge cases.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <div class="step-content">
-                            <h3>Implementation & Training</h3>
-                            <p>I help integrate the model into your workflows and provide training to ensure your team can effectively use and maintain it. Includes documentation and ongoing support planning.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 50px;">
-                    <h3>Engagement Options</h3>
-                    <p>Flexible consulting arrangements to meet your specific business needs:</p>
-                    
-                    <div class="grid grid-2" style="margin-top: 30px;">
-                        <div class="service-card">
-                            <h3>Project-Based</h3>
-                            <p>Focused engagement for specific model development needs with clearly defined deliverables and timeline. Perfect for discrete modeling challenges.</p>
-                        </div>
-                        
-                        <div class="service-card">
-                            <h3>Ongoing Support</h3>
-                            <p>Regular assistance with model maintenance, updates, and improvements as your business evolves. Ideal for long-term model management.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 50px; padding: 30px; background-color: var(--light-bg); border-radius: var(--border-radius);">
-                    <h3>Building Trust Through Excellence</h3>
-                    <p>As a consultant focused on model development, I'm committed to delivering exceptional results that speak for themselves. Each project is an opportunity to demonstrate the value of well-designed models and establish lasting professional relationships built on trust and proven outcomes.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Demo Section -->
-        <section id="demo" class="section-alt">
-            <div class="wrapper">
-                <h2>Veriquant Demo Platform</h2>
-                
-                <div class="coming-soon">
-                    <div class="coming-soon-badge">Coming Soon</div>
-                    <h3>Interactive Model Demonstrations</h3>
-                    <p>The Veriquant Demo Platform will showcase practical applications of model development in action. This interactive demonstration will illustrate how properly designed models can solve real-world problems and provide valuable insights for decision-making.</p>
-                    
-                    <div style="margin-top: 40px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
-                        <h4 style="color: var(--primary-color); margin-bottom: 20px;">Development Timeline:</h4>
-                        <div style="margin-bottom: 15px;">
-                            <strong>Phase 1 (In Progress):</strong> Core model architecture and demonstration framework development
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <strong>Phase 2:</strong> Interactive components and visualizations implementation
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <strong>Phase 3:</strong> Case study integration and documentation
-                        </div>
-                        <div>
-                            <strong>Launch:</strong> Public release of the demonstration platform
-                        </div>
-                    </div>
-                    
-                    <p style="margin-top: 30px;">Check back soon to explore how model development can be applied to your specific business challenges.</p>
-                    <a href="#contact" class="btn">Contact for Early Access</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="wrapper">
-                <h2>Let's Work Together</h2>
-                <p>Ready to discuss your model development needs? I offer a free initial consultation to understand your requirements and explore how I can help.</p>
-                <p>Every project begins with a clear understanding of your goals to ensure we develop solutions that address your specific challenges.</p>
-                <a href="mailto:jasona.milne@outlook.com" class="btn btn-large btn-white">Schedule Your Free Consultation</a>
-                
-                <div style="margin-top: 50px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.2);">
-                    <h3 style="color: white; margin-bottom: 20px;">Ready to improve your decision-making capabilities?</h3>
-                    <p>Let's discuss how model development can solve your business challenges</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="wrapper">
-            <p>&copy; <span id="year"></span> Jason A. Milne. All rights reserved.</p>
-            <p style="margin-top: 10px;">
-                <a href="https://linkedin.com/in/jasonamilne" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/jasonamilne" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm Jason</h1>
+            <p class="hero-subtitle">Software Developer & Problem Solver</p>
+            <p class="hero-description">
+                I create digital experiences that make a difference. 
+                Passionate about clean code, innovative solutions, and continuous learning.
             </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate software developer with a love for creating efficient, 
+                        scalable solutions. With experience in both frontend and backend technologies, 
+                        I enjoy tackling complex problems and turning ideas into reality.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies, 
+                        contributing to open source projects, or enjoying the outdoors.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🚀</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Alpha</h3>
+                        <p>A full-stack web application built with modern technologies. Features real-time data processing and intuitive user interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">📱</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mobile Companion</h3>
+                        <p>Cross-platform mobile application with offline capabilities and seamless synchronization across devices.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">App Store</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🔧</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Developer Tools</h3>
+                        <p>A collection of productivity tools for developers, including code generators and automation scripts.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CLI</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Documentation</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Sass</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>
+                        I'm always interested in new opportunities and exciting projects. 
+                        Whether you have a question or just want to say hi, I'll do my best to get back to you!
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@jasonmilne.dev" class="contact-link">
+                            📧 hello@jasonmilne.dev
+                        </a>
+                        <a href="https://linkedin.com/in/jasonmilne" class="contact-link">
+                            💼 LinkedIn
+                        </a>
+                        <a href="https://github.com/jasonamilne" class="contact-link">
+                            💻 GitHub
+                        </a>
+                        <a href="https://twitter.com/jasonmilne" class="contact-link">
+                            🐦 Twitter
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Jason Milne. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                
-                // Close mobile menu if open
-                const navLinks = document.getElementById('navLinks');
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
-
-    <!-- Google Analytics (Replace G-XXXXXXXXXX with your actual tracking ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Jason A. Milne Model Development Consultant",
-      "description": "Professional model development services to help businesses make better decisions with reliable and effective models.",
-      "url": "https://jasonamilne.github.io/",
-      "priceRange": "$$",
-      "service": [
-        {
-          "@type": "Service",
-          "name": "Model Development",
-          "description": "Building custom models from the ground up based on your specific requirements"
-        },
-        {
-          "@type": "Service",
-          "name": "Model Evaluation",
-          "description": "Assessment of existing models with recommendations for improvement"
-        },
-        {
-          "@type": "Service",
-          "name": "Documentation & Knowledge Transfer",
-          "description": "Clear documentation and training to ensure your team understands"
-        }
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "jasona.milne@outlook.com",
-        "contactType": "customer service"
-      },
-      "sameAs": [
-        "https://linkedin.com/in/jasonamilne",
-        "https://github.com/jasonamilne"
-      ]
-    }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
