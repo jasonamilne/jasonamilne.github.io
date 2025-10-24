@@ -1,129 +1,128 @@
 <!DOCTYPE html>
-<html lang="la">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nomen Nominis — Profilum Executivum</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Name - Resume</title>
     <style>
-        /* Minimal, unobtrusive styling to ensure readable resume if no stylesheet present */
-        :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Noto Sans',sans-serif;color:#111}
-        body{margin:0;padding:40px;background:#fff}
-        .wrapper{max-width:900px;margin:0 auto}
-        header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
-        h1{margin:0;font-size:1.6rem;letter-spacing:0.02em}
-        .title-sub{color:#555;margin-top:6px;font-weight:500}
-        .summary{margin-top:18px;color:#333;line-height:1.45}
-        .section{margin-top:28px}
-        .two-col{display:grid;grid-template-columns:1fr 320px;gap:28px}
-        .pill{display:inline-block;padding:6px 10px;background:#f1f1f1;border-radius:999px;margin:4px 6px 4px 0}
-        ul{margin:8px 0 0 18px}
-        .contact{font-size:0.95rem;color:#444}
-        footer{margin-top:36px;color:#777;font-size:0.9rem}
-        @media(max-width:880px){.two-col{grid-template-columns:1fr}}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 { font-size: 32px; margin-bottom: 4px; }
+        h2 { 
+            font-size: 18px; 
+            border-bottom: 2px solid #333; 
+            padding-bottom: 4px; 
+            margin: 24px 0 12px; 
+        }
+        h3 { font-size: 16px; margin: 12px 0 4px; }
+        .contact { font-size: 14px; color: #666; margin-bottom: 20px; }
+        .contact a { color: #0066cc; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
+        .job { margin-bottom: 16px; }
+        .job-title { font-weight: 600; }
+        .job-meta { color: #666; font-size: 14px; margin-bottom: 6px; }
+        ul { margin-left: 20px; margin-top: 6px; }
+        li { margin-bottom: 4px; }
+        .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .skill { 
+            background: #f0f0f0; 
+            padding: 4px 12px; 
+            border-radius: 4px; 
+            font-size: 14px; 
+        }
+        @media print {
+            body { padding: 0; }
+            .contact a { color: #333; }
+        }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div>
-                <h1>Nomen Nominis</h1>
-                <div class="title-sub">Profilum Executivum • Praesidium | Strategy | Transformation</div>
-            </div>
-            <aside class="contact">
-                <div><strong>Contactus</strong></div>
-                <div>lorem.ipsum@exemplum.com</div>
-                <div>+00 (000) 000-0000</div>
-                <div>Urbs, Regio</div>
-            </aside>
-        </header>
+    <header>
+        <h1>Your Name</h1>
+        <div class="contact">
+            your.email@example.com • (123) 456-7890 • City, State • 
+            <a href="https://linkedin.com/in/yourname">LinkedIn</a> • 
+            <a href="https://github.com/yourname">GitHub</a>
+        </div>
+    </header>
 
-        <section class="summary section">
-            <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae neque nec urna facilisis pretium. Praesent dictum, sapien non bibendum laoreet, arcu urna fermentum augue, at tincidunt lectus velit non nunc. Excutie et operatio: strategia, executione et transformatione.</p>
-        </section>
+    <section>
+        <h2>Summary</h2>
+        <p>Brief professional summary highlighting your key strengths, years of experience, and what you bring to the role. Keep it focused and results-oriented. 2-3 sentences maximum.</p>
+    </section>
 
-        <div class="two-col">
-            <main>
-                <section class="section">
-                    <h2>Summariae Competentiae</h2>
-                    <div>
-                        <span class="pill">Strategia Corporativa</span>
-                        <span class="pill">Transformatione Digitalis</span>
-                        <span class="pill">Governantia & Risk</span>
-                        <span class="pill">Operatio & Performance</span>
-                        <span class="pill">Stakeholder Leadership</span>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h2>Selecta Successa</h2>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur — ipsum dignissim et auctor.</li>
-                        <li>Praesent vehicula nunc vel nibh laoreet, et facilisis sapien commodo.</li>
-                        <li>Curabitur a lacus in urna pulvinar efficitur — incrementum et efficacia demonstrata.</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h2>Experientia Professionalis</h2>
-
-                    <article>
-                        <h3>Praefectus Executivus — Societas Exemplum</h3>
-                        <div class="title-sub">MMXX–Praesens | Lorem Ipsum, Urbs</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, nisi vitae gravida cursus, urna sapien dictum arcu, non efficitur sapien magna at augue. </p>
-                        <ul>
-                            <li>Consectetur etus optimizatio processus et reductio sumptus.</li>
-                            <li>Implementatio programmatum transformationis transversalis.</li>
-                        </ul>
-                    </article>
-
-                    <article style="margin-top:12px">
-                        <h3>Director Transformationis — Firma Demo</h3>
-                        <div class="title-sub">MMXV–MMXX | Urbs, Regio</div>
-                        <p>Phasellus condimentum, justo quis fermentum aliquet, nisl lacus tempor mi, id cursus magna sapien ut leo.</p>
-                        <ul>
-                            <li>Leadership per projecta strate­gica cum multiplices partes-stakeholders.</li>
-                            <li>Metricis KPI definitis et governance institutional implementata.</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section class="section">
-                    <h2>Educatio & Certificationes</h2>
-                    <ul>
-                        <li>Lorem Universitas — Gradus Illustris, MMXIII</li>
-                        <li>Certificatum Exemplum — Institutione, MMXVI</li>
-                    </ul>
-                </section>
-            </main>
-
-            <aside>
-                <section class="section">
-                    <h2>Core Skills</h2>
-                    <ul>
-                        <li>Strategic Planning</li>
-                        <li>Organizational Change</li>
-                        <li>Financial Oversight</li>
-                        <li>Risk & Compliance</li>
-                        <li>Executive Communication</li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <h2>Board & Advisory</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur — membrum consilii et advisor pro variis inceptis.</p>
-                </section>
-
-                <section class="section">
-                    <h2>Linguae</h2>
-                    <p>Latin (exemplum), Anglice (proficientia), Aliis (placeholder)</p>
-                </section>
-            </aside>
+    <section>
+        <h2>Experience</h2>
+        
+        <div class="job">
+            <div class="job-title">Job Title</div>
+            <div class="job-meta">Company Name • Month Year – Present • Location</div>
+            <ul>
+                <li>Specific achievement with quantifiable result (increased X by Y%, reduced costs by $Z)</li>
+                <li>Key responsibility demonstrating relevant skills for target role</li>
+                <li>Project or initiative that shows leadership and impact</li>
+            </ul>
         </div>
 
-        <footer>
-            <p>&copy; MMXXV Nomen Nominis — Profilum Executivum. All rights reserved.</p>
-        </footer>
-    </div>
+        <div class="job">
+            <div class="job-title">Previous Job Title</div>
+            <div class="job-meta">Previous Company • Month Year – Month Year • Location</div>
+            <ul>
+                <li>Achievement with measurable outcome</li>
+                <li>Technical or leadership responsibility</li>
+                <li>Problem solved or improvement made</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-title">Earlier Position</div>
+            <div class="job-meta">Company • Month Year – Month Year • Location</div>
+            <ul>
+                <li>Key accomplishment or responsibility</li>
+                <li>Relevant skill demonstration</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="job">
+            <div class="job-title">Degree Name, Major</div>
+            <div class="job-meta">University Name • Graduation Year</div>
+        </div>
+        <div class="job">
+            <div class="job-title">Previous Degree (if applicable)</div>
+            <div class="job-meta">University Name • Year</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <span class="skill">Skill 1</span>
+            <span class="skill">Skill 2</span>
+            <span class="skill">Skill 3</span>
+            <span class="skill">Skill 4</span>
+            <span class="skill">Skill 5</span>
+            <span class="skill">Skill 6</span>
+            <span class="skill">Skill 7</span>
+            <span class="skill">Skill 8</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <ul>
+            <li>Certification Name – Issuing Organization, Year</li>
+            <li>Another Certification – Organization, Year</li>
+        </ul>
+    </section>
 </body>
 </html>
